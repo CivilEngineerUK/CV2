@@ -145,12 +145,12 @@
 \newcommand\skills{ 
 ~
 	\smartdiagram[bubble diagram]{
-        \textbf{Full Stack}\\\textbf{Dev},
-        \textbf{Relational/}\\\textbf{Document}\\\textbf{Databases},
-        \textbf{~~~~OOP~~~~~},
-        \textbf{Mobile}\\\textbf{Dev},
-        \textbf{Machine}\\\textbf{Learning},
-        \textbf{Test}\\\textbf{~~Automation~~},
+        \textbf{Structural}\\\textbf{Engineering},
+        \textbf{First}\\\textbf{Principles},
+        \textbf{Structural}\\\textbf{Dynamics},
+        \textbf{Finite}\\\textbf{Elements},
+        \textbf{Non-Linear}\\\textbf{Analysis},
+        \textbf{Soil}\\\textbf{Structure}\\\textbf{Interaction},
         \textbf{Statistical}\\\textbf{Analysis}
     }
 }
@@ -201,7 +201,7 @@
               \begin{array}{l}
               {\href{\cvlinkedin}{\includegraphics[scale=0.04]{img/LinkedIn_Logo.png}}}
               \end{array}
-              $} & \href{\cvlinkedin}{\hspace{16mm}/in/hsgadgil} \\
+              $} & \href{\cvlinkedin}{\hspace{16mm}/in/michaelrustell} \\
             }
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
             {$
@@ -220,7 +220,7 @@
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              {\href{mailto:\cvmail}{\includegraphics[scale=0.05]{img/email.png}}}
+              {\href{mailto:\cvmail}{\includegraphics[scale=0.05]{Figures/gmail.png}}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail}}
@@ -228,24 +228,39 @@
 
     %------------------------------------------------
         
-        \profilesection{Skills}{4cm}
+        \profilesection{Engineering Skills}{0.35cm}
 
     	\skills
         
         %------------------------------------------------
         
-        \profilesection{Interests}{3cm} 
+        \profilesection{Computing Skills}{0.5cm} 
         
-		\interests{{Data Mining \& Statistical Analysis/5},{Software Development/5.8},{Cryptography/4.3},{UI Design/4},{Cloud Computing/5}}
+		\interests{{Algorithm Development/5.3},{Big Data \& Cloud Computing/4.9},{Software Development/5.6},{Machine Learning \& Statistics/5.3},{Finite Element Programming/5.8}}
         
         \interests
+
+\profilesection{Languages}{2.4cm} 
+
+\begin{table}[ht]
+ \centering
+ \begin{tabular}{p{0.38\textwidth} m{0.35\textwidth} m{0.3\textwidth}}
+ 
+\multirow{2}{*}{\includegraphics[width = 0.9\linewidth]{Figures/Rlogo.png}}& \includegraphics[width = 0.9\linewidth]{Figures/python-logo-master-flat.png} & 
+\includegraphics[width = 0.7\linewidth]{Figures/julia.jpg} \\
+& \includegraphics[width = 0.9\linewidth]{Figures/matlab1.png} & \includegraphics[width = 0.8\linewidth]{Figures/Cpp.png} \\
+ \end{tabular}
+ \end{table}
         
-        \profilesection{Languages}{2.4cm} 
-        {$
-              \begin{array}{l}
-              \hspace{-2mm}{\includegraphics[scale=0.45]{img/languages_muted.png}}
-              \end{array}
-        $}   
+
+% references
+\profilesection{References}{2.2cm}
+%
+\href{peter.neville-jones@aecom.com 
+}{\textbf{Peter Neville-Jones} \textit{Line Manager}}. Technical Director
+
+\href{soon.thiam.khu@ monash.edu}{\textbf{Prof. Soon-Thiam Khu} \textit{EngD Supvsr.}} Now Head of Discipline at Monash University, Malaysia
+
   \end{textblock}
 }
 
@@ -272,7 +287,7 @@
 		\LARGE\headingfont\color{headercolor}%
 		\@sectioncolor #1%
 	}
-  \par\vspace{\parskip}
+  %\par\vspace{\parskip}
 }
 
 \renewcommand{\subsection}[1]{

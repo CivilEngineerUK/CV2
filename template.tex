@@ -18,8 +18,28 @@
 %----------------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
-
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{tabularx}
+\usepackage{graphicx, array, blindtext, hyperref, calc, multirow, enumitem}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+}
+
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlinegraphics[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{\includegraphics[height=1.2\myheight]{#1}}%
+}
+ 
+\urlstyle{same}
 
 %----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
@@ -29,13 +49,18 @@
 
 
 
-\cvname{Harsh Gadgil} % Your name
-\cvjobtitle{Full Stack Developer, \\ Aspiring Data Scientist} % Job title/career
+\cvname{Michael Rustell EngD CEng MICE} % Your name
+\cvjobtitle{Senior Maritime Engineer}
+%\cvjobtitle{\begin{itemize}
+%\item Structural Dynamics 
+%\item Machine Learning
+%\item Statistics \& Data Science 
+%\end{itemize}} % Job title/career
 
-\cvlinkedin{https://linkedin.com/in/hsgadgil}
-\cvnumberphone{+1 205 282 9201} % Phone number
-\cvsite{http://uoguelph.ca/\textasciitilde hgadgil} % Personal website
-\cvmail{harsh.gadgil@gmail.com} % Email address
+\cvlinkedin{https://linkedin.com/in/michaelrustell}
+\cvnumberphone{+44 7591454736} % Phone number
+\cvsite{http://mysite\textasciitilde mjr} % Personal website
+\cvmail{michaelrustellresearch} % Email address
 
 %----------------------------------------------------------------------------------------
 
@@ -43,90 +68,92 @@
 
 \makeprofile % Print the sidebar
 
+\section{Summary}
+
+Technically adept and competent Chartered Civil Engineer with skills particularly in dynamics, finite element programming and developing statistical models. 
+Extensive maritime, data analysis and machine learning experience within an industrial environment. Recent projects have included seismic analysis lead on nuclear projects including soil-structure interaction and controlled ductile response and vessel impact specialist for the Thames Tideway Tunnel. 
+
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
 
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem
-    	{2015 - 2016 \\ (Expected)}
-        {MSc., Computer Science}
-        {\href{http://www.uoguelph.ca/}{University of Guelph}}
-        {Guelph, Ontario, Canada}
-        {Current GPA: 3.7/4, 83\% \\ \textit{Specialization: Data Mining}}
-	\twentyitem
-    	{2009 - 2013}
-        {BEng., Computer Engineering}
-        {\href{http://www.unipune.ac.in/}{University of Pune}}
-        {Pune, Maharashtra, India}
-        {First Class with Distinction}
-	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
-\end{twenty}
+\renewcommand{\arraystretch}{0.5}
+\begin{table}[ht]
+%\setlength{\extrarowheight}{.5em}
+\centering
+\begin{tabular}{p{0.12\textwidth} p{0.68\textwidth} m{0.2\textwidth}}
+% surrey EngD
+2015 & \textbf{Doctor of Engineering} in \href{http://epubs.surrey.ac.uk/812133/1/Rustell.\%20M.\%20Thesis\%202016.pdf}{\textbf{\textit{Stochastic Optimisation of LNG Terminal Infrastructure}}} 
 
+Using \textit{machine learning} and \textit{statistics} to simultaneously minimise cost, risk and berth downtime.
 
-\section{Research}
-\begin{twenty}
-	\twentyitem
-    	{2015 - 2016}
-        {Graduate Research Assistant}
-        {\href{http://www.uoguelph.ca/}{University of Guelph}}
-        {}
-        {
-        {\begin{itemize}
-        \item Worked on integrating large, noisy datasets containing upto six million records for predictive modeling and regression analyses
-        \item Performed classification using Support Vector Machines and multivariate regression analyses using Logistic Regression
-        \item A paper describing the integration methodology and preliminary results is accepted for publication at the DINA workshop in IEEE International Conference of Data Mining 2016 in Barcelona, Spain
-    \end{itemize}}
-        }
-\end{twenty}
+& \href{http://www.surrey.ac.uk}{\includegraphics[width = 0.9\linewidth]{Figures/surreylogo.png}}\\
 
+%ABDN
+2015 & \textbf{PGCert} in \textbf{\textit{Oil and Gas Structural Engineering}} 
+
+Dynamics, jackets, topsides, steel connections etc.
+
+& \href{https://www.abdn.ac.uk/study/postgraduate-taught/degree-programmes/217/oil-and-gas-structural-engineering/}{\includegraphics[width = 0.9\linewidth]{Figures/aberdeen-university-logo.jpg}}\\
+
+%Plym
+2010/ 2009 & \textbf{MSc \& BSc} in \textbf{\textit{Civil Engineering}} 
+\begin{itemize}\setlength\parskip{0pt} 
+\item  Scott Wilson Award for \textit{Best final year project}
+\item IStructE award for \textit{Best Presentation} 
+\item IET Award for \textit{Best Engineering Project} 
+\end{itemize} &
+\href{https://www.plymouth.ac.uk/courses/postgraduate/msc-civil-engineering}{\includegraphics[width = 0.9\linewidth]{Figures/plym2.png}}\\
+
+\end{tabular}
+\end{table}
 %----------------------------------------------------------------------------------------
 %	 EXPERIENCE
 %----------------------------------------------------------------------------------------
 
 \section{Experience}
 
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem
-    	{Sep 2015 - \\May 2016}
-        {Co-Founder \& Full Stack Developer}
-        {\href{http://www.localxchange.ca/}{LocalXChange Inc.}}
-        {}
-        {
-        {\begin{itemize}
-        \item In a team of two, won \$8,000 in funding from The Hub incubator (CBaSE, University of Guelph) to kick start a startup venture
-        \item In a team of three, built a prototype hyperlocal platform with support from the University of Guelph. The goal was to deliver hyperlocal news and events and other content from community organizations to local users
-        \item Built hybrid mobile and web apps using Node.js, Meteor, Ionic and AngularJS. Performed automated testing using Selenium. Designed and built production quality NoSQL databases
-        \item Met with city officials, including the Mayor, and university executives to discuss social \& business aspects of the platform 
-    \end{itemize}}
-        }
-        
-    \twentyitem
-   		{Sept 2015 - \\ Present}
-        {Graduate Teaching Assistant}
-        {\href{http://www.uoguelph.ca}{University of Guelph}}
-        {}
-        {
-        {\begin{itemize}
-        \item TA for CIS*2430 (OOP), CIS*4150 (Software Reliability \& Testing) and CIS*3530 (Database Systems \& Concepts) courses
-    \end{itemize}}
-        }
-        
-     \twentyitem
-   		{Dec 2013 - \\ Apr 2015}
-        {Test Automation Engineer}
-        {\href{http://www.synechron.com/}{Synechron}}
-        {}
-        {
-        \begin{itemize}
-        \item Developed a \textit{Keyword Driven} and \textit{Behavior Driven} test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/crm.aspx}{Microsoft Dynamics CRM}. Wrote an efficient recursive function to search within multi-level nested frames, reducing development time. Automated existing manual test cases. Won SPOT award and appreciation from client{\includegraphics[scale=0.05]{img/trophy.png}}
-        \item Involved in development of a Coded UI test automation framework for \href{https://www.microsoft.com/en-ca/dynamics/erp-ax-overview.aspx}{Microsoft Dynamics AX} in C\#
-        \item Involved in manual testing for \href{http://www.fico.com/en/products/fico-blaze-advisor-decision-rules-management-system}{FICO Blaze Advisor}. Participated in standup meetings and Three Amigos sessions with onshore/offshore developers and BAs. Responsible for sending daily status reports and testing user stories. Used JIRA and Quality Center for defect reporting, and Quick Test Professional for executing automated test cases
-    \end{itemize}
-    	}
-        
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\begin{table}[ht]
+\centering
+\begin{tabular}{p{0.12\textwidth} p{0.68\textwidth} m{0.2\textwidth}}
+
+% AECOM
+2015 - 
+
+Current & \textbf{Senior Maritime Engineer}, \textit{Ports \& Marine}
+\begin{itemize}[topsep=0pt]
+\item Stochastic vessel impact \& seismic analysis
+\item Development of R, MATLAB, C++ and Python tools for statistical analysis and optimisation
+\end{itemize}
+& \href{http://www.aecom.com/markets/transportation/ports-marine/}{\includegraphics[width = 0.75\linewidth]{Figures/AECOM.jpg}}
+\\
+
+% HRW
+2011-2015 & \textbf{Research Engineer}, \textit{Engineering Group} 
+\begin{itemize}[topsep=0pt]
+\item PIANC \textit{De Paepe-Willems Award} 2014  
+\item COPRI \textit{Best Student Paper} Award 2013
+\item RAENG Panasonic Trust awardee
+\item Two-time recipient of UGPN Travel Award
+\end{itemize}
+
+& \href{http://www.hrwallingford.com/expertise/port-harbour-development}{\includegraphics[width = 0.75\linewidth]{Figures/HR-Wallingford-logo.jpg}}\\
+
+\end{tabular}
+\end{table}
+
+\section{Key Projects}
+
+\textbf{Thames Tideway Tunnel, UK} – Developed statistical model to estimate vessel impact for all critical infrastructure in central 10km section. Continued involvement as expert in vessel impact.
+
+\textbf{Nuclear (Confidential), UK} – Developed analysis methodology for seismic loading including soil-structure interaction and controlled ductile response. Coordinated a team of 9 engineers. Lead author on key reports that undergo review by government client. Design package lead for one of three key structures.
+
+\textbf{Port (Confidential), UK} – Designers representative on a live container port undergoing significant repairs on a defective quay wall. Planned and oversaw testing and research of materials and products in unconventional applications. Dealt with design issues related to hydrogen embrittlement.
+
+
+\section{Awards}
+
+
 
 \end{document} 
