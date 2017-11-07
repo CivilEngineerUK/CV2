@@ -345,7 +345,8 @@
 %	 MARGINS AND LINKS
 %----------------------------------------------------------------------------------------
 
-\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
+\RequirePackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm%,nohead,nofoot
+]{geometry}
 
 
 \usepackage{smartdiagram}
